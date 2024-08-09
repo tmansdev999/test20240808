@@ -14,7 +14,7 @@ const getMovie = async (movieId) => {
 }
 
 
-export default async function ({ params }) {
+const page = async function ({ params }) {
     const movie = await getMovie(params.movieId)
     return (
         <div className='w-full relative pb-20 bg-bgcolor'>
@@ -35,3 +35,5 @@ export default async function ({ params }) {
         </div>
     )
 }
+
+export default page;
